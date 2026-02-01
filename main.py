@@ -6,3 +6,11 @@ print(f"Water: {resources['water']}ml")
 print(f"Milk: {resources['milk']}ml")
 print(f"Coffee: {resources['coffee']}g")
 print(f"Money: ${resources['money']}")
+
+
+def check_resources(drink):
+  for item in MENU[drink]["ingredients"]:
+    if MENU[drink]["ingredients"][item] > resources[item]:
+      print(f"Sorry there is not enough {item}.")
+      return False
+  return True
