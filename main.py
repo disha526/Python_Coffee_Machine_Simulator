@@ -26,3 +26,9 @@ def is_transaction_successful(money_received, drink_cost):
     else:
         print("Sorry that's not enough money. Money refunded.")
         return False
+
+
+def make_coffee(drink_name, ingredients):
+    for item in ingredients:
+        resources[item] -= ingredients[item]
+    print(f"Here is your {drink_name} ")
